@@ -11,4 +11,12 @@ A collection of LeetCode questions to ace the coding interview!
 |  |
 | ------- |
 | [2943-maximize-area-of-square-hole-in-grid](https://github.com/rajivr021/Leetcode/tree/master/2943-maximize-area-of-square-hole-in-grid) |
+## Linked List
+|  |
+| ------- |
+| [0707-design-linked-list](https://github.com/rajivr021/Leetcode/tree/master/0707-design-linked-list) |
+## Design
+|  |
+| ------- |
+| [0707-design-linked-list](https://github.com/rajivr021/Leetcode/tree/master/0707-design-linked-list) |
 <!---LeetCode Topics End-->
