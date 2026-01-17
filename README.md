@@ -5,6 +5,7 @@ A collection of LeetCode questions to ace the coding interview!
 ## Array
 |  |
 | ------- |
+| [0704-binary-search](https://github.com/rajivr021/Leetcode/tree/master/0704-binary-search) |
 | [2943-maximize-area-of-square-hole-in-grid](https://github.com/rajivr021/Leetcode/tree/master/2943-maximize-area-of-square-hole-in-grid) |
 | [3000-maximum-area-of-longest-diagonal-rectangle](https://github.com/rajivr021/Leetcode/tree/master/3000-maximum-area-of-longest-diagonal-rectangle) |
 ## Sorting
@@ -41,4 +42,8 @@ A collection of LeetCode questions to ace the coding interview!
 |  |
 | ------- |
 | [0141-linked-list-cycle](https://github.com/rajivr021/Leetcode/tree/master/0141-linked-list-cycle) |
+## Binary Search
+|  |
+| ------- |
+| [0704-binary-search](https://github.com/rajivr021/Leetcode/tree/master/0704-binary-search) |
 <!---LeetCode Topics End-->
