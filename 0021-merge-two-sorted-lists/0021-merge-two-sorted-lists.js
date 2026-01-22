@@ -10,22 +10,34 @@
  * @param {ListNode} list2
  * @return {ListNode}
  */
-var mergeTwoLists = function (list1, list2) {
-    let finalNode = new ListNode();
-    let curr = finalNode;
+var mergeTwoLists = function (l1, l2) {
+    if (!l1) return l2
+    if (!l2) return l1
+    let curr = null;
 
-    while (list1 !== null && list2 !== null) {
-        if (list1.val <= list2.val) {
-            curr.next = list1;
-            list1 = list1.next;
-        } else{
-            curr.next = list2;
-            list2 = list2.next;
+    if (l1.val < l2.val) {
+        curr = l1;
+        l1 = l1.next;
+    } else {
+        curr = l2;
+        l2 = l2.next;
+    }
+
+    let currHead = curr;
+
+    while (l1 && l2) {
+        if (l1.val < l2.val) {
+            curr.next = l1;
+            l1 = l1.next;
+        } else {
+            curr.next = l2;
+            l2 = l2.next;
         }
-
 
         curr = curr.next;
     }
-     curr.next = list1 !== null ? list1 : list2;
-    return finalNode.next;
+
+    curr.next = !l1 ? l2 : l1
+
+    return currHead;
 };
