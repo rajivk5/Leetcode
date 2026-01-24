@@ -6,11 +6,13 @@ A collection of LeetCode questions to ace the coding interview!
 |  |
 | ------- |
 | [0704-binary-search](https://github.com/rajivr021/Leetcode/tree/master/0704-binary-search) |
+| [1877-minimize-maximum-pair-sum-in-array](https://github.com/rajivr021/Leetcode/tree/master/1877-minimize-maximum-pair-sum-in-array) |
 | [2943-maximize-area-of-square-hole-in-grid](https://github.com/rajivr021/Leetcode/tree/master/2943-maximize-area-of-square-hole-in-grid) |
 | [3000-maximum-area-of-longest-diagonal-rectangle](https://github.com/rajivr021/Leetcode/tree/master/3000-maximum-area-of-longest-diagonal-rectangle) |
 ## Sorting
 |  |
 | ------- |
+| [1877-minimize-maximum-pair-sum-in-array](https://github.com/rajivr021/Leetcode/tree/master/1877-minimize-maximum-pair-sum-in-array) |
 | [2943-maximize-area-of-square-hole-in-grid](https://github.com/rajivr021/Leetcode/tree/master/2943-maximize-area-of-square-hole-in-grid) |
 ## Linked List
 |  |
@@ -44,6 +46,7 @@ A collection of LeetCode questions to ace the coding interview!
 | [0160-intersection-of-two-linked-lists](https://github.com/rajivr021/Leetcode/tree/master/0160-intersection-of-two-linked-lists) |
 | [0234-palindrome-linked-list](https://github.com/rajivr021/Leetcode/tree/master/0234-palindrome-linked-list) |
 | [0876-middle-of-the-linked-list](https://github.com/rajivr021/Leetcode/tree/master/0876-middle-of-the-linked-list) |
+| [1877-minimize-maximum-pair-sum-in-array](https://github.com/rajivr021/Leetcode/tree/master/1877-minimize-maximum-pair-sum-in-array) |
 ## Math
 |  |
 | ------- |
@@ -71,4 +74,8 @@ A collection of LeetCode questions to ace the coding interview!
 |  |
 | ------- |
 | [0234-palindrome-linked-list](https://github.com/rajivr021/Leetcode/tree/master/0234-palindrome-linked-list) |
+## Greedy
+|  |
+| ------- |
+| [1877-minimize-maximum-pair-sum-in-array](https://github.com/rajivr021/Leetcode/tree/master/1877-minimize-maximum-pair-sum-in-array) |
 <!---LeetCode Topics End-->
