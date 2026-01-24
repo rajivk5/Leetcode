@@ -12,19 +12,15 @@
 var getDecimalValue = function (head) {
 
     let curr = head;
+    let result = 0;
 
-    let arr = []
     while (curr) {
-        arr.push(curr.val)
+
+        result = result * 2 + curr.val;
         curr = curr.next;
     }
 
 
-    let binary = 0;
-    let n = arr.length - 1;
-    for (let i = 0; i < arr.length; i++) {
-        binary += arr[i] * (2 ** (n - i))
-    }
 
-    return binary
+    return result
 };
