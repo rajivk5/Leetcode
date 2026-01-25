@@ -8,6 +8,7 @@ A collection of LeetCode questions to ace the coding interview!
 | [0704-binary-search](https://github.com/rajivr021/Leetcode/tree/master/0704-binary-search) |
 | [1877-minimize-maximum-pair-sum-in-array](https://github.com/rajivr021/Leetcode/tree/master/1877-minimize-maximum-pair-sum-in-array) |
 | [1984-minimum-difference-between-highest-and-lowest-of-k-scores](https://github.com/rajivr021/Leetcode/tree/master/1984-minimum-difference-between-highest-and-lowest-of-k-scores) |
+| [2942-find-words-containing-character](https://github.com/rajivr021/Leetcode/tree/master/2942-find-words-containing-character) |
 | [2943-maximize-area-of-square-hole-in-grid](https://github.com/rajivr021/Leetcode/tree/master/2943-maximize-area-of-square-hole-in-grid) |
 | [3000-maximum-area-of-longest-diagonal-rectangle](https://github.com/rajivr021/Leetcode/tree/master/3000-maximum-area-of-longest-diagonal-rectangle) |
 ## Sorting
@@ -88,4 +89,5 @@ A collection of LeetCode questions to ace the coding interview!
 |  |
 | ------- |
 | [0058-length-of-last-word](https://github.com/rajivr021/Leetcode/tree/master/0058-length-of-last-word) |
+| [2942-find-words-containing-character](https://github.com/rajivr021/Leetcode/tree/master/2942-find-words-containing-character) |
 <!---LeetCode Topics End-->
