@@ -40,8 +40,8 @@ var swapPairs = function (head) {
     let r = head.next;
 
     l.next = swapPairs(r.next);
-    r.next = l
+    r.next = l;
 
-    return r;
+    return r
 
 };
