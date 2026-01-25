@@ -84,4 +84,8 @@ A collection of LeetCode questions to ace the coding interview!
 |  |
 | ------- |
 | [1984-minimum-difference-between-highest-and-lowest-of-k-scores](https://github.com/rajivr021/Leetcode/tree/master/1984-minimum-difference-between-highest-and-lowest-of-k-scores) |
+## String
+|  |
+| ------- |
+| [0058-length-of-last-word](https://github.com/rajivr021/Leetcode/tree/master/0058-length-of-last-word) |
 <!---LeetCode Topics End-->
