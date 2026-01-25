@@ -5,16 +5,14 @@
  */
 var numJewelsInStones = function (jewels, stones) {
 
-    let map = new Map();
+    let set = new Set(jewels);
     let count = 0;
 
+
     for (let ch of stones) {
-        map.set(ch, (map.get(ch) || 0) + 1);
-    }
-
-
-    for (let j of jewels) {
-        count += map.get(j) || 0;
+        if (set.has(ch)) {
+            count++;
+        }
     }
 
     return count
