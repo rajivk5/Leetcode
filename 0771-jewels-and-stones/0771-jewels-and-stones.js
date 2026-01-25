@@ -4,16 +4,19 @@
  * @return {number}
  */
 var numJewelsInStones = function (jewels, stones) {
+
+    let map = new Map();
     let count = 0;
 
-    for (let i = 0; i < stones.length; i++) {
-
-        for (let j = 0; j < jewels.length; j++) {
-            if (jewels[j] === stones[i]) {
-                ++count;
-            }
-        }
+    for (let ch of stones) {
+        map.set(ch, (map.get(ch) || 0) + 1);
     }
 
-    return count;
+
+    for (let j of jewels) {
+        count += map.get(j) || 0;
+    }
+
+    return count
+
 };
