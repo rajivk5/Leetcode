@@ -48,6 +48,7 @@ A collection of LeetCode questions to ace the coding interview!
 | [0141-linked-list-cycle](https://github.com/rajivr021/Leetcode/tree/master/0141-linked-list-cycle) |
 | [0160-intersection-of-two-linked-lists](https://github.com/rajivr021/Leetcode/tree/master/0160-intersection-of-two-linked-lists) |
 | [0234-palindrome-linked-list](https://github.com/rajivr021/Leetcode/tree/master/0234-palindrome-linked-list) |
+| [0541-reverse-string-ii](https://github.com/rajivr021/Leetcode/tree/master/0541-reverse-string-ii) |
 | [0876-middle-of-the-linked-list](https://github.com/rajivr021/Leetcode/tree/master/0876-middle-of-the-linked-list) |
 | [1877-minimize-maximum-pair-sum-in-array](https://github.com/rajivr021/Leetcode/tree/master/1877-minimize-maximum-pair-sum-in-array) |
 ## Math
@@ -92,6 +93,7 @@ A collection of LeetCode questions to ace the coding interview!
 |  |
 | ------- |
 | [0058-length-of-last-word](https://github.com/rajivr021/Leetcode/tree/master/0058-length-of-last-word) |
+| [0541-reverse-string-ii](https://github.com/rajivr021/Leetcode/tree/master/0541-reverse-string-ii) |
 | [0771-jewels-and-stones](https://github.com/rajivr021/Leetcode/tree/master/0771-jewels-and-stones) |
 | [1221-split-a-string-in-balanced-strings](https://github.com/rajivr021/Leetcode/tree/master/1221-split-a-string-in-balanced-strings) |
 | [2942-find-words-containing-character](https://github.com/rajivr021/Leetcode/tree/master/2942-find-words-containing-character) |
