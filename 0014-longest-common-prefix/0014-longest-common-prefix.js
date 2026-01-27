@@ -15,7 +15,7 @@ var longestCommonPrefix = function(strs) {
 
 
         }
-        k++
+        ++k
 
     }
 
