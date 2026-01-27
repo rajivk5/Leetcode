@@ -4,9 +4,20 @@
  * @return {boolean}
  */
 var isAnagram = function (s, t) {
+    if (s.length !== t.length) return false;
 
+    let map = {
 
-    return s.split('').sort().join('') === t.split('').sort().join('');
+    }
+    for (ch of s) {
+        map[ch] = (map[ch] || 0) + 1;
 
+    }
 
+    for (ch of t) {
+        if (!map[ch]) return false;
+        map[ch]--
+    }
+
+    return true;
 };
