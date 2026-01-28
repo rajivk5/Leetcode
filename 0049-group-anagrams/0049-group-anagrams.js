@@ -2,22 +2,20 @@
  * @param {string[]} strs
  * @return {string[][]}
  */
-var groupAnagrams = function(strs) {
-    
-   const groups = new Map();
+var groupAnagrams = function (strs) {
 
-    for (const word of strs) {
+    const map = {}
 
-        let ch = word.split('').sort().join('');
-        if (!groups.has(ch)) {
-            groups.set(ch, []);
+    for (let i = 0; i < strs.length; i++) {
+
+        let ch = strs[i].split('').sort().join('');
+        if (!map[ch]) {
+            map[ch] = [strs[i]];
+        } else {
+            map[ch].push(strs[i])
         }
 
-        groups.get(ch).push(word);
-
-
-
     }
-    
-    return [...groups.values()];
+
+    return [...Object.values(map)]
 };
