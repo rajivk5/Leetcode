@@ -4,19 +4,20 @@
  */
 var groupAnagrams = function(strs) {
     
-    const map = new Map();
+   const groups = new Map();
 
-  for (const word of strs) {
-    const count = Array(26).fill(0);
-    for (const ch of word) {
-      count[ch.charCodeAt(0) - 97]++;
+    for (const word of strs) {
+
+        let ch = word.split('').sort().join('');
+        if (!groups.has(ch)) {
+            groups.set(ch, []);
+        }
+
+        groups.get(ch).push(word);
+
+
+
     }
-
-    const key = count.join("#");
-
-    if (!map.has(key)) map.set(key, []);
-    map.get(key).push(word);
-  }
-
-  return [...map.values()];
+    
+    return [...groups.values()];
 };
