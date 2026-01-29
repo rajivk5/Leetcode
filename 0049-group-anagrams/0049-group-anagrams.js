@@ -34,7 +34,7 @@ var groupAnagrams = function (strs) {
         }
         let key = "";
         for (let k = 0; k < 26; k++) {
-            key = key + String.fromCharCode(k) + freqArr[k]
+            key = key + '#' + freqArr[k]
         }
         if (!map[key]) {
             map[key] = [s]
