@@ -18,14 +18,10 @@ MyStack.prototype.push = function (x) {
 MyStack.prototype.pop = function () {
 
     for (let i = 0; i < this.q.length - 1; i++) {
-
-        let front = this.q.shift()
-        this.q.push(front)
-
+        this.q.push(this.q.shift())
     }
-    let ans = this.q[0]
-    this.q.shift()
-    return ans
+
+    return this.q.shift()
 
 };
 
@@ -36,18 +32,12 @@ MyStack.prototype.top = function () {
 
 
     for (let i = 0; i < this.q.length - 1; i++) {
-
-        let front = this.q.shift()
-        this.q.push(front)
-
+        this.q.push(this.q.shift())
     }
 
     let ans = this.q[0]
-
     this.q.push(this.q.shift())
-
     return ans
-
 
 };
 
