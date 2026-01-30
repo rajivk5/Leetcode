@@ -43,6 +43,7 @@ A collection of LeetCode questions to ace the coding interview!
 ## Design
 |  |
 | ------- |
+| [0225-implement-stack-using-queues](https://github.com/rajivr021/Leetcode/tree/master/0225-implement-stack-using-queues) |
 | [0707-design-linked-list](https://github.com/rajivr021/Leetcode/tree/master/0707-design-linked-list) |
 ## Two Pointers
 |  |
@@ -88,6 +89,7 @@ A collection of LeetCode questions to ace the coding interview!
 ## Stack
 |  |
 | ------- |
+| [0225-implement-stack-using-queues](https://github.com/rajivr021/Leetcode/tree/master/0225-implement-stack-using-queues) |
 | [0234-palindrome-linked-list](https://github.com/rajivr021/Leetcode/tree/master/0234-palindrome-linked-list) |
 ## Greedy
 |  |
@@ -123,4 +125,8 @@ A collection of LeetCode questions to ace the coding interview!
 |  |
 | ------- |
 | [0014-longest-common-prefix](https://github.com/rajivr021/Leetcode/tree/master/0014-longest-common-prefix) |
+## Queue
+|  |
+| ------- |
+| [0225-implement-stack-using-queues](https://github.com/rajivr021/Leetcode/tree/master/0225-implement-stack-using-queues) |
 <!---LeetCode Topics End-->
