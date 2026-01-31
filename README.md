@@ -1,6 +1,46 @@
-# Leetcode
-A collection of LeetCode questions to ace the coding interview!
-<!---LeetCode Topics Start-->
+# LeetCode Solutions – Data Structures & Algorithms
+
+This repository contains my solutions to **LeetCode problems**, focused on building strong fundamentals in **Data Structures and Algorithms**.
+
+The goal of this repo is not just to solve problems, but to:
+- write **clear and readable code**
+- understand **time & space trade-offs**
+- strengthen **problem-solving thinking** for interviews
+
+---
+
+## 🧠 Topics Covered
+
+- Arrays & Strings  
+- Hashing  
+- Stack & Queue  
+- Linked List  
+- Two Pointers  
+- Sliding Window  
+- Basic Recursion  
+
+(More topics will be added progressively.)
+
+---
+
+## 🛠️ Tech Stack
+
+- **Language:** JavaScript  
+- **Platform:** LeetCode  
+
+Each solution is written to be easy to understand and aligned with common interview expectations.
+
+---
+
+## 📂 Repository Structure
+
+Problems are organized by **LeetCode question number**, with each file containing:
+- problem logic
+- clean implementation
+- handling of edge cases where applicable
+
+Example:
+
 # LeetCode Topics
 ## Array
 |  |
