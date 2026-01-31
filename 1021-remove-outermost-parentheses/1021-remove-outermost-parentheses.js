@@ -8,11 +8,11 @@ var removeOuterParentheses = function (s) {
 
     for (let i = 0; i < s.length; i++) {
         if (s[i] === '(') {
-            if (depth > 0) res.push('(');
+            if (depth > 0) res.push(s[i]);
             depth++;
         } else {
             depth--;
-            if (depth > 0) res.push(')');
+            if (depth > 0) res.push(s[i]);
         }
     }
 
