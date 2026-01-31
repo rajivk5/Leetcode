@@ -1,6 +1,7 @@
 
 var MyQueue = function () {
-    this.s = []
+    this.s1 = []
+    this.s2 = []
 };
 
 /** 
@@ -8,24 +9,28 @@ var MyQueue = function () {
  * @return {void}
  */
 MyQueue.prototype.push = function (x) {
-    this.s.push(x)
+    this.s1.push(x)
 };
 
 /**
  * @return {number}
  */
 MyQueue.prototype.pop = function () {
-    let s2 = []
-    for (let i = this.s.length - 1; i > 0; i--) {
+    
+    for (let i = this.s1.length - 1; i >= 0; i--) {
 
-        s2.push(this.s.pop())
+        this.s2.push(this.s1.pop())
 
     }
 
-    let ans = this.s.pop()
 
-    for (let j = s2.length - 1; j >= 0; j--) {
-        this.s.push(s2[j]);
+    let ans = this.s2.pop()
+
+    for (let j = this.s2.length - 1; j >= 0; j--) {
+
+        this.s1.push(this.s2.pop())
+
+
     }
 
     return ans
@@ -35,18 +40,19 @@ MyQueue.prototype.pop = function () {
  * @return {number}
  */
 MyQueue.prototype.peek = function () {
-    let s2 = []
-    for (let i = this.s.length - 1; i > 0; i--) {
+    for (let i = this.s1.length - 1; i >= 0; i--) {
 
-        s2.push(this.s.pop())
+        this.s2.push(this.s1.pop())
 
     }
 
-    let ans = this.s[0]
+    let ans = this.s2.pop()
+    this.s1.push(ans)
 
-    for (let j = s2.length - 1; j >= 0; j--) {
-        this.s.push(s2[j]);
+    for (let j = this.s2.length - 1; j >= 0; j--) {
+        this.s1.push(this.s2.pop())
     }
+
 
     return ans
 };
@@ -55,7 +61,7 @@ MyQueue.prototype.peek = function () {
  * @return {boolean}
  */
 MyQueue.prototype.empty = function () {
-    return this.s.length === 0
+    return this.s1.length === 0 && this.s2.length === 0
 };
 
 /** 
