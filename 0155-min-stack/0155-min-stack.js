@@ -20,13 +20,16 @@ MinStack.prototype.push = function (val) {
  * @return {void}
  */
 MinStack.prototype.pop = function () {
-    this.s.pop()
+   if (this.s.length > 0) {
+        this.s.pop()
+    }
 };
 
 /**
  * @return {number}
  */
 MinStack.prototype.top = function () {
+    if (this.s.length === 0) return null
     return this.s[this.s.length - 1][0]
 };
 
