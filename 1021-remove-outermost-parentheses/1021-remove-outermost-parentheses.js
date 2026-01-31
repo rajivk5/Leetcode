@@ -4,17 +4,17 @@
  */
 var removeOuterParentheses = function (s) {
     let depth = 0;
-    let ans = '';
+    let res = [];
 
-    for (let ch of s) {
-        if (ch === '(') {
-            if (depth > 0) ans += ch;
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === '(') {
+            if (depth > 0) res.push('(');
             depth++;
         } else {
             depth--;
-            if (depth > 0) ans += ch;
+            if (depth > 0) res.push(')');
         }
     }
 
-    return ans;
+    return res.join('');
 };
