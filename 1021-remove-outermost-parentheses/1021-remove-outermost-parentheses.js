@@ -2,19 +2,18 @@
  * @param {string} s
  * @return {string}
  */
-var removeOuterParentheses = function(s) {
-     let stack = [];
-
+var removeOuterParentheses = function (s) {
+    let stack = [];
     let ans = '';
+
     for (let i = 0; i < s.length; i++) {
         if (s[i] === '(') {
-            stack.push(s[i]);
-            ans += ((stack.length > 1) ? s[i] : '')
+            if (stack.length > 0) ans += '('; // inner '('
+            stack.push('(');
         } else {
-            ans += ((stack.length > 1) ? s[i] : '')
             stack.pop();
+            if (stack.length > 0) ans += ')'; // inner ')'
         }
-
     }
 
     return ans;
