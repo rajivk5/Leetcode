@@ -9,7 +9,7 @@ The goal of this repo is not just to solve problems, but to:
 
 ---
 
-## 🧠 Topics Covered
+##  Topics Covered
 
 - Arrays & Strings  
 - Hashing  
@@ -23,7 +23,7 @@ The goal of this repo is not just to solve problems, but to:
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Language:** JavaScript  
 - **Platform:** LeetCode  
@@ -32,7 +32,7 @@ Each solution is written to be easy to understand and aligned with common interv
 
 ---
 
-## 📂 Repository Structure
+##  Repository Structure
 
 Problems are organized by **LeetCode question number**, with each file containing:
 - problem logic
