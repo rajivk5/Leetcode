@@ -7,6 +7,7 @@ A collection of LeetCode questions to ace the coding interview!
 | ------- |
 | [0014-longest-common-prefix](https://github.com/rajivr021/Leetcode/tree/master/0014-longest-common-prefix) |
 | [0049-group-anagrams](https://github.com/rajivr021/Leetcode/tree/master/0049-group-anagrams) |
+| [0150-evaluate-reverse-polish-notation](https://github.com/rajivr021/Leetcode/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0704-binary-search](https://github.com/rajivr021/Leetcode/tree/master/0704-binary-search) |
 | [1877-minimize-maximum-pair-sum-in-array](https://github.com/rajivr021/Leetcode/tree/master/1877-minimize-maximum-pair-sum-in-array) |
 | [1984-minimum-difference-between-highest-and-lowest-of-k-scores](https://github.com/rajivr021/Leetcode/tree/master/1984-minimum-difference-between-highest-and-lowest-of-k-scores) |
@@ -63,6 +64,7 @@ A collection of LeetCode questions to ace the coding interview!
 |  |
 | ------- |
 | [0002-add-two-numbers](https://github.com/rajivr021/Leetcode/tree/master/0002-add-two-numbers) |
+| [0150-evaluate-reverse-polish-notation](https://github.com/rajivr021/Leetcode/tree/master/0150-evaluate-reverse-polish-notation) |
 | [1290-convert-binary-number-in-a-linked-list-to-integer](https://github.com/rajivr021/Leetcode/tree/master/1290-convert-binary-number-in-a-linked-list-to-integer) |
 | [1903-largest-odd-number-in-string](https://github.com/rajivr021/Leetcode/tree/master/1903-largest-odd-number-in-string) |
 ## Recursion
@@ -92,6 +94,7 @@ A collection of LeetCode questions to ace the coding interview!
 |  |
 | ------- |
 | [0020-valid-parentheses](https://github.com/rajivr021/Leetcode/tree/master/0020-valid-parentheses) |
+| [0150-evaluate-reverse-polish-notation](https://github.com/rajivr021/Leetcode/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0155-min-stack](https://github.com/rajivr021/Leetcode/tree/master/0155-min-stack) |
 | [0225-implement-stack-using-queues](https://github.com/rajivr021/Leetcode/tree/master/0225-implement-stack-using-queues) |
 | [0232-implement-queue-using-stacks](https://github.com/rajivr021/Leetcode/tree/master/0232-implement-queue-using-stacks) |
