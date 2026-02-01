@@ -2,25 +2,25 @@
  * @param {number[]} nums
  * @return {number[]}
  */
-var nextGreaterElements = function (nums) {
+var nextGreaterElements = function (arr) {
 
-    let arr = [...nums, ...nums]
+    let n = arr.length;
     let ans = new Array(arr.length).fill(-1)
     let stack = [];
-    stack.push(arr[arr.length - 1])
+    stack.push(arr[n - 1])
 
-    for (let i = arr.length - 2; i >= 0; i--) {
+    for (let i = (2 * n) - 2; i >= 0; i--) {
         while (stack.length) {
-            if (arr[i] < stack[stack.length - 1]) {
-                ans[i] = stack[stack.length - 1];
+            if (arr[i%n] < stack[stack.length - 1]) {
+                ans[i%n] = stack[stack.length - 1];
                 break;
             } else {
                 stack.pop()
             }
         }
-        stack.push(arr[i])
+        stack.push(arr[i%n])
     }
 
 
-    return ans.slice(0, arr.length / 2)
+    return ans.slice(0, n)
 };
