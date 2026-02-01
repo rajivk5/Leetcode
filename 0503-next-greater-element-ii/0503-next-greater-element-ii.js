@@ -11,14 +11,14 @@ var nextGreaterElements = function (arr) {
 
     for (let i = (2 * n) - 2; i >= 0; i--) {
         while (stack.length) {
-            if (arr[i%n] < stack[stack.length - 1]) {
-                ans[i%n] = stack[stack.length - 1];
+            if (arr[i % n] < stack[stack.length - 1]) {
+                ans[i % n] = stack[stack.length - 1];
                 break;
             } else {
                 stack.pop()
             }
         }
-        stack.push(arr[i%n])
+        stack.push(arr[i % n])
     }
 
 
