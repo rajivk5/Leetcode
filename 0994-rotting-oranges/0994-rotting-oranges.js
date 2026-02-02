@@ -3,48 +3,56 @@
  * @return {number}
  */
 var orangesRotting = function(grid) {
-     const m = grid.length;
-        const n = grid[0].length;
+     let m = grid.length;
+    let n = grid[0].length;
 
-        const queue = [];
-        let fresh = 0;
+    let queue = [];
 
-        // 1. Initialize queue with all rotten oranges
-        for (let i = 0; i < m; i++) {
-            for (let j = 0; j < n; j++) {
-                if (grid[i][j] === 2) queue.push([i, j]);
-                else if (grid[i][j] === 1) fresh++;
+    for (let i = 0; i < m; i++) {
+        for (let j = 0; j < n; j++) {
+            if (grid[i][j] === 2) {
+                queue.push([i, j, 0])
             }
         }
 
-        const dirs = [[1, 0], [-1, 0], [0, 1], [0, -1]];
-        let minutes = 0;
-        let index = 0;
+    }
 
-        // 2. Level-by-level BFS
-        while (index < queue.length && fresh > 0) {
-            const size = queue.length - index;
+    let maxmin = 0;
+    //!SECTION
+    while (queue.length) {
 
-            for (let i = 0; i < size; i++) {
-                const [x, y] = queue[index++];
+        let [x, y, level] = queue.shift();
 
-                for (const [dx, dy] of dirs) {
-                    const nx = x + dx;
-                    const ny = y + dy;
+        if (x > 0 && grid[x - 1][y] === 1) {
+            grid[x - 1][y] = 2;
+            queue.push([x - 1, y, level + 1])
+        }
+        if (x < m - 1 && grid[x + 1][y] === 1) {
+            grid[x + 1][y] = 2;
+            queue.push([x + 1, y, level + 1])
+        }
+        if (y < n - 1 && grid[x][y + 1] === 1) {
+            grid[x][y + 1] = 2;
+            queue.push([x, y + 1, level + 1])
+        }
+        if (y > 0 && grid[x][y - 1] === 1) {
+            grid[x][y - 1] = 2;
+            queue.push([x, y - 1, level + 1])
+        }
+        maxmin = Math.max(maxmin, level)
+    }
 
-                    if (
-                        nx >= 0 && nx < m &&
-                        ny >= 0 && ny < n &&
-                        grid[nx][ny] === 1
-                    ) {
-                        grid[nx][ny] = 2;
-                        fresh--;
-                        queue.push([nx, ny]);
-                    }
-                }
+
+    //!SECTION
+
+    for (let i = 0; i < m; i++) {
+        for (let j = 0; j < n; j++) {
+            if (grid[i][j] === 1) {
+                return -1
             }
-            minutes++;
         }
 
-        return fresh === 0 ? minutes : -1;
+    }
+
+    return maxmin;
 };
