@@ -3,20 +3,20 @@
  * @param {number} target
  * @return {number}
  */
-var search = function(nums, target) {
-    let left = 0;
-    let right = nums.length - 1;
+var search = function (nums, target) {
+    let l = 0;
+    let r = nums.length - 1;
 
-    while (right >= left) {
-        let middle = Math.floor((left + right) / 2)
-        if (target == nums[middle]) {
-            return middle
-        } else if (target < nums[middle]) {
-            right = middle - 1
+
+    while (l <= r) {
+        let m = Math.floor((l + r) / 2)
+        if (nums[m] === target) return m;
+        else if (nums[m] < target) {
+            l = m + 1;
         } else {
-            left = middle + 1;
+            r = m - 1
         }
     }
 
-    return -1
+    return -1;
 };
