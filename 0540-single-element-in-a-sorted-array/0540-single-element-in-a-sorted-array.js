@@ -3,28 +3,21 @@
  * @return {number}
  */
 var singleNonDuplicate = function (arr) {
-   let l = 0;
+    let l = 0;
     let r = arr.length - 1;
 
     while (l < r) {
-        let m = Math.floor((l + r) / 2);
-        if(arr[m]!==arr[m-1] && arr[m]!==arr[m+1]) return arr[m]
+        let mid = Math.floor((l + r) / 2);
+        if (mid % 2 === 1) mid--;
 
-        if (arr[m] === arr[m - 1]) {
-            if ((m + l + 1) % 2 != 0) {
-                r = m - 2
-            } else {
-                l = m + 1
-            }
-        } else if (arr[m] === arr[m + 1]) {
-            if ((r + m + 1) % 2 !== 0) {
-                l = m + 2
-            }else{
-                r = m - 1;
-            }
+        if (arr[mid] === arr[mid + 1]) {
+            l = mid + 2;  
+        } else {
+            r = mid;       
         }
     }
-    return arr[l]
+    return arr[l];
+   
 };
 
 
