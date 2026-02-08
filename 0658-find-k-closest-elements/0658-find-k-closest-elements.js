@@ -7,7 +7,7 @@
 var findClosestElements = function (arr, k, x) {
 
     let l = 0;
-    let r = arr.length - 1;
+    let r = arr.length - k;
 
     while (l < r) {
         let m = Math.floor((l + r) / 2);
