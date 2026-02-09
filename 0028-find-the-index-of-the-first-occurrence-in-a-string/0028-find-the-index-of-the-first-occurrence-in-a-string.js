@@ -3,21 +3,46 @@
  * @param {string} needle
  * @return {number}
  */
-var strStr = function (h, n) {
-    if (n.length === 0) return 0;
-    
-    for (let i = 0; i <= h.length - n.length; i++) {
-        let j = 0;
+var strStr = function (haystack, needle) {
+    let n = haystack.length;
+    let m = needle.length;
 
-        for (j = 0; j < n.length; j++) {
-            if (h[i + j] !== n[j]) break;
-        }
+    let lps = [0];
+    let i = 0;
+    let j = 1;
 
-        if (j === n.length) {
-            return i;
+
+    while (j < m) {
+        if (needle[i] === needle[j]) {
+            lps[j] = i + 1;
+            i++; j++;
+        } else {
+            if (i == 0) {
+                lps[j] = 0;
+                j++
+            } else {
+                i = lps[i - 1]
+            }
         }
     }
 
-    return -1
+    i = j = 0;
 
+    while (i < n) {
+        if (haystack[i] == needle[j]) {
+            i++; j++
+        } else {
+            if (j == 0) {
+                i++
+            } else {
+                j = lps[j - 1]
+            }
+        }
+
+        if (j === m) {
+            return i - m
+        }
+    }
+
+    return -1;
 };
