@@ -14,39 +14,13 @@
 var getIntersectionNode = function (headA, headB) {
 
 
-    let currA = headA;
-    let lengthOflistA = 0;
-    while (currA) {
-        currA = currA.next
-        lengthOflistA++
-    }
-    let currB = headB;
-    let lengthOflistB = 0;
-    while (currB) {
-        currB = currB.next
-        lengthOflistB++
+    let PA = headA;
+    let PB = headB;
+
+    while (PA !== PB) {
+        PA = PA == null ? headB : PA.next;
+        PB = PB == null ? headA : PB.next;
     }
 
-    let diff = Math.abs(lengthOflistA - lengthOflistB);
-
-    if (lengthOflistA > lengthOflistB) {
-        let temp = headA;
-        headA = headB;
-        headB = temp;
-    }
-
-
-    for (let i = 0; i < diff; i++) {
-        headB = headB.next;
-    }
-
-    currA = headA;
-    currB = headB;
-
-    while (currA !== currB) {
-        currA = currA.next;
-        currB = currB.next;
-    }
-
-    return currA;
+    return PA;
 };
