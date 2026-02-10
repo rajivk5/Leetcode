@@ -13,25 +13,40 @@
  */
 var getIntersectionNode = function (headA, headB) {
 
-    let storeList = new Set();
 
-    let curr = headA;
-
-    while (curr) {
-        storeList.add(curr)
-        curr = curr.next
+    let currA = headA;
+    let lengthOflistA = 0;
+    while (currA) {
+        currA = currA.next
+        lengthOflistA++
+    }
+    let currB = headB;
+    let lengthOflistB = 0;
+    while (currB) {
+        currB = currB.next
+        lengthOflistB++
     }
 
-    let curr2 = headB;
-    while (curr2) {
-        if (storeList.has(curr2)) {
-            return curr2;
-        }
+    let diff = Math.abs(lengthOflistA - lengthOflistB);
 
-        curr2 = curr2.next;
+    if (lengthOflistA > lengthOflistB) {
+        let temp = headA;
+        headA = headB;
+        headB = temp;
     }
 
 
-    return null;
+    for (let i = 0; i < diff; i++) {
+        headB = headB.next;
+    }
 
+    currA = headA;
+    currB = headB;
+
+    while (currA !== currB) {
+        currA = currA.next;
+        currB = currB.next;
+    }
+
+    return currA;
 };
