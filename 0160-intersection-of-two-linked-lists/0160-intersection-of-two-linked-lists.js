@@ -13,7 +13,6 @@
  */
 var getIntersectionNode = function (headA, headB) {
 
-
     let PA = headA;
     let PB = headB;
 
