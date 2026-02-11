@@ -16,7 +16,6 @@ var trap = function (arr) {
     }
 
 
-
     let ans = 0;
     for (let k = 0; k < arr.length; k++) {
         ans += Math.max((Math.min(maxL[k], maxR[k])) - arr[k], 0)
