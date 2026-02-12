@@ -14,7 +14,7 @@ var lengthOfLongestSubstring = function (s) {
         }
 
         map[s[j]] = j;
-        currWS = j - i + 1;
+       let currWS = j - i + 1;
         maxWS = Math.max(maxWS, currWS)
     }
 
