@@ -3,25 +3,19 @@
  * @param {number} k
  * @return {number[]}
  */
-    var maxSlidingWindow = function (nums, k) {
+var maxSlidingWindow = function (arr, k) {
     let result = [];
-    let deque = []; 
-
-    for (let i = 0; i < nums.length; i++) {
-
-        if (deque.length && deque[0] <= i - k) {
-            deque.shift();
+    let q = [];
+    let i = j = 0;
+    while (j < arr.length) {
+        while (q.length && arr[j] > q[q.length-1]) q.pop();
+        q.push(arr[j])
+        if (j >= k - 1) {
+            result.push(q[0])
+            arr[i] === q[0] && q.shift();
+            i++;
         }
-
-        while (deque.length && nums[deque[deque.length - 1]] < nums[i]) {
-            deque.pop();
-        }
-
-        deque.push(i);
-
-        if (i >= k - 1) {
-            result.push(nums[deque[0]]);
-        }
+        j++
     }
 
     return result;
