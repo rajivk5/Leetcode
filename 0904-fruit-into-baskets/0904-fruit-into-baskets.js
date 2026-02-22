@@ -1,0 +1,25 @@
+/**
+ * @param {number[]} fruits
+ * @return {number}
+ */
+var totalFruit = function (fruits) {
+    let i = 0;
+    let maxLen = 0;
+    let map = {};
+    for (let j = 0; j < fruits.length; j++) {
+        map[fruits[j]] = (map[fruits[j]] || 0) + 1;
+
+        while (Object.keys(map).length > 2) {
+            map[fruits[i]]--;
+            if (map[fruits[i]] === 0) {
+                delete map[fruits[i]];
+            }
+            i++
+        }
+
+        maxLen = Math.max(maxLen, j - i + 1)
+
+    }
+
+    return maxLen
+};
