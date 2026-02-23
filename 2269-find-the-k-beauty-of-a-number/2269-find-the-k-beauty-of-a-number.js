@@ -4,18 +4,16 @@
  * @return {number}
  */
 var divisorSubstrings = function (num, k) {
-    let arr = num.toString().split('')
-    let i = 0;
-    let j = k - 1;
+     let str = num.toString();
     let count = 0;
-    while (j < arr.length) {
-         let sub = Number(arr.slice(i, j + 1).join(''));
+    
+    for (let i = 0; i <= str.length-k; i++) {
+      
+        let sub = Number(str.substring(i, i + k));
 
         if (sub !== 0 && num % sub === 0) {
             count++;
         }
-        j++
-        i++
     }
 
     return count;
