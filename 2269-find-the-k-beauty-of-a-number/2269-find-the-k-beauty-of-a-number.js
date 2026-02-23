@@ -4,16 +4,18 @@
  * @return {number}
  */
 var divisorSubstrings = function (num, k) {
-     let str = num.toString();
+   let divisor = 10 ** k;
+    let temp = num;
     let count = 0;
-    
-    for (let i = 0; i <= str.length-k; i++) {
-      
-        let sub = Number(str.substring(i, i + k));
+
+    while (temp >= 10 ** (k - 1)) {
+        let sub = temp % divisor;
 
         if (sub !== 0 && num % sub === 0) {
             count++;
         }
+
+        temp = Math.floor(temp / 10);
     }
 
     return count;
