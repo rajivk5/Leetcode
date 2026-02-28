@@ -26,11 +26,11 @@
 //2nd Approach
 
 var preorderTraversal = function (root) {
-    if(!root) return [];
+    if (!root) return [];
 
     let ans = [];
     let stack = [root];
-    while(stack.length){
+    while (stack.length) {
         let curr = stack.pop();
         ans.push(curr.val);
         curr.right && stack.push(curr.right)
