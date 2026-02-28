@@ -24,7 +24,7 @@
     return ans;
 }; */
 
-
+// 2nd Approach-------------
 var inorderTraversal = function (root) {
     let ans = [];
     let stack = [];
