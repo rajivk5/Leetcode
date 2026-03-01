@@ -26,7 +26,7 @@
 };
  */
 
-var postorderTraversal = function (root) {
+/* var postorderTraversal = function (root) {
     if (!root) return []
     let s1 = [root];
     let s2 = [];
@@ -42,5 +42,30 @@ var postorderTraversal = function (root) {
         let ele = s2.pop().val;
         ans.push(ele)
     }
+    return ans;
+} */
+
+
+var postorderTraversal = function (root) {
+    let stack = [];
+    let curr = root;
+    let ans = [];
+    let LV = null;
+
+    while (curr || stack.length) {
+        while (curr) {
+            stack.push(curr);
+            curr = curr.left;
+        }
+        let peek = stack[stack.length - 1];
+
+        if (peek.right && peek.right != LV) {
+            curr = peek.right;
+        } else {
+            ans.push(peek.val);
+            LV = stack.pop();
+        }
+    }
+
     return ans;
 }
