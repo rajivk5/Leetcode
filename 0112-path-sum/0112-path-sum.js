@@ -11,22 +11,37 @@
  * @param {number} targetSum
  * @return {boolean}
  */
+/* 
+var hasPathSum = function (root, targetSum) {
+   if (!root) return false;
+   let ans = false;
+   let traversal = (curr, currSum) => {
+       let newSum = currSum + curr.val;
+       if (!curr.left && !curr.right) {
+           if (newSum === targetSum) {
+               ans = ans || true
+           }
+       }
+       curr.left && traversal(curr.left, newSum)
+       curr.right && traversal(curr.right, newSum)
+       return curr.val
+   }
+
+   traversal(root, 0);
+   return ans;
+
+}; */
+
+
 var hasPathSum = function (root, targetSum) {
     if (!root) return false;
-    let ans = false;
-    let traversal = (curr, currSum) => {
-        let newSum = currSum + curr.val;
-        if (!curr.left && !curr.right) {
-            if (newSum === targetSum) {
-                ans = ans || true
-            }
-        }
-        curr.left && traversal(curr.left, newSum)
-        curr.right && traversal(curr.right, newSum)
-        return curr.val
+
+    if (!root.left && !root.right) {
+        return targetSum === root.val
     }
 
-    traversal(root, 0);
-    return ans;
+    let leftHasPathSum = hasPathSum(root.left, targetSum - root.val);
+    let rightHasPathSum = hasPathSum(root.right, targetSum - root.val);
 
-};
+    return leftHasPathSum || rightHasPathSum;
+}
