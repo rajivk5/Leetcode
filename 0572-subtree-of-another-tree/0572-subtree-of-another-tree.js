@@ -15,7 +15,7 @@ var isSubtree = function (root, subRoot) {
     let hashRoot = serialize(root);
     let hashSubRoot = serialize(subRoot);
 
-   return hashRoot.includes(hashSubRoot);
+    return hashRoot.includes(hashSubRoot);
 };
 
 let serialize = function (root) {
