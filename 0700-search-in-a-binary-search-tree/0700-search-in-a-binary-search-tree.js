@@ -11,7 +11,7 @@
  * @param {number} val
  * @return {TreeNode}
  */
-var searchBST = function (root, val) {
+/* var searchBST = function (root, val) {
     let ans = null
     let traversal = (curr) => {
         curr.val == val ? ans = curr : val < curr.val ? curr.left && traversal(curr.left) : curr.right && traversal(curr.right);
@@ -21,4 +21,13 @@ var searchBST = function (root, val) {
 
     return ans;
 
-};
+}; */
+
+//BottomUp approach
+
+var searchBST = function (root, val) {
+
+    if (!root || root.val == val) return root;
+
+    return root.val < val ? searchBST(root.right, val) : searchBST(root.left, val)
+}
