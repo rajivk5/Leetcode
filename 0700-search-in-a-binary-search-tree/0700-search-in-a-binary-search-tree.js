@@ -14,11 +14,7 @@
 var searchBST = function (root, val) {
     let ans = null
     let traversal = (curr) => {
-        if (curr.val == val) {
-            ans = curr;
-        } else {
-            val < curr.val ? curr.left && traversal(curr.left) : curr.right && traversal(curr.right);
-        }
+        curr.val == val ? ans = curr : val < curr.val ? curr.left && traversal(curr.left) : curr.right && traversal(curr.right);
     }
 
     traversal(root);
