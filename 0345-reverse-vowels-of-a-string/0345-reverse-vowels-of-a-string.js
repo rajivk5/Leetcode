@@ -6,9 +6,7 @@ var reverseVowels = function (s) {
     s = s.split('')
     let i = 0;
     let j = s.length - 1;
-    let map = new Map([
-        ['a'], ['e'], ['i'], ['o'], ['u'], ['A'], ['E'], ['I'], ['O'], ['U']
-    ]);
+    let map = new Set('aeiouAEIOU')
     while (i < j) {
         if (map.has(s[i]) && map.has(s[j])) {
             let temp = s[i];
