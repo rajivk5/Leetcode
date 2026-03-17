@@ -7,7 +7,7 @@ var reverseVowels = function (s) {
     let i = 0;
     let j = s.length - 1;
     let map = new Map([
-        ['a', 1], ['e', 2], ['i', 3], ['o', 4], ['u', 5], ['A', 6], ['E', 7], ['I', 8], ['O', 9], ['U', 10]
+        ['a'], ['e'], ['i'], ['o'], ['u'], ['A'], ['E'], ['I'], ['O'], ['U']
     ]);
     while (i < j) {
         if (map.has(s[i]) && map.has(s[j])) {
