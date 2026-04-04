@@ -9,13 +9,13 @@ var simplifyPath = function (path) {
     let n = path.length;
     for (let i = 0; i < n; i++) {
         if (path[i] === '' || path[i] === '.') {
-            continue; // ignore empty and current dir
+            continue; 
         } else if (path[i] === '..') {
             if (stack.length > 0) {
-                stack.pop(); // go back only if possible
+                stack.pop(); 
             }
         } else {
-            stack.push(path[i]); // valid directory
+            stack.push(path[i]);
         }
     }
 
