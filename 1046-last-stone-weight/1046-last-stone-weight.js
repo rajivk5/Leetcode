@@ -3,20 +3,17 @@
  * @return {number}
  */
 var lastStoneWeight = function (stones) {
-    let heap = new MaxPriorityQueue();
+    let heap = MaxPriorityQueue.fromArray(stones)
 
-    for (let i = 0; i < stones.length; i++) {
-        heap.enqueue(stones[i]);
-    }
 
-    while(heap.size()>1){
-        let x = heap.dequeue();
-        let y = heap.dequeue();
+    while (heap.size() > 1) {
+        let x = heap.pop();
+        let y = heap.pop();
 
-        if(x-y > 0){
-            heap.enqueue(x-y)
+        if (x - y > 0) {
+            heap.push(x - y)
         }
     }
 
-    return heap.dequeue() || 0
+    return heap.pop() || 0
 };
